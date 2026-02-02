@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Condeni - Personal Injury Lawyer | Voice for the Injured</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --red: #C8102E;
+            --white: #ffffff;
+            --gray: #333333;
+            --light-gray: #f8f8f8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--gray);
+            background: var(--white);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+        
+        /* Logo Section */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .logo {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Hero Section with Image and Content */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: start;
+        }
+        
+        .headshot {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .hero-content h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        
+        .compensation-intro {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+        
+        .compensation-list {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+        
+        .compensation-list li {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 10px;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .compensation-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--black);
+            font-weight: 900;
+            font-size: 1.3rem;
+        }
+        
+        .cta-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+        
+        .cta-text .free {
+            text-decoration: underline;
+        }
+        
+        .phone-numbers {
+            margin-bottom: 35px;
+        }
+        
+        .phone-item {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--red);
+            text-decoration: none;
+            margin-bottom: 8px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .phone-item:hover {
+            opacity: 0.7;
+        }
+        
+        .services-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 35px;
+        }
+        
+        /* Video Section */
+        .video-section {
+            margin-bottom: 50px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Google Reviews Link */
+        .reviews-link {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 40px;
+        }
+        
+        .reviews-link a {
+            color: var(--red);
+            text-decoration: underline;
+            font-style: italic;
+        }
+        
+        .reviews-link a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Process Section */
+        .process-section {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+        
+        .process-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 25px;
+        }
+        
+        .process-item {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .process-item .label {
+            font-weight: 900;
+            color: var(--red);
+            display: inline;
+        }
+        
+        .process-item .text {
+            color: var(--gray);
+            display: inline;
+        }
+        
+        /* Partnership Banner */
+        .partnership-banner {
+            background: #f0f0f0;
+            padding: 35px 40px;
+            border-radius: 8px;
+            border-left: 6px solid var(--red);
+            margin-bottom: 50px;
+        }
+        
+        .partnership-banner p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+        
+        .partnership-banner .firm-name {
+            font-weight: 900;
+            color: var(--black);
+            font-style: italic;
+        }
+        
+        /* Contact Footer */
+        .contact-footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 2px solid var(--light-gray);
+        }
+        
+        .contact-footer p {
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+        }
+        
+        .contact-footer a {
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .contact-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .headshot {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .phone-item {
+                font-size: 1.1rem;
+            }
+            
+            .process-section,
+            .partnership-banner {
+                padding: 30px 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                max-width: 90%;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .compensation-list li,
+            .services-text,
+            .process-item .text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="https://cdn.prod.website-files.com/697a6ed254da8a752c4d208d/697a80ba88cf2117c1d934fc_Condeni_logo-drk.pdf.jpg" alt="Condeni Law - Voice for the Injured" class="logo">
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div>
+                <img src="https://cdn.prod.website-files.com/697a6ed254da8a752c4d208d/697a80dc8ebdb0c1ecd2962b_Joe%20Condeni%20-%20Pic%20TU%20(1).jpg" alt="Joe Condeni" class="headshot">
+            </div>
+            
+            <div class="hero-content">
+                <h1>You've been injured … We help!</h1>
+                
+                <p class="compensation-intro">Compensation for:</p>
+                <ul class="compensation-list">
+                    <li>PAIN AND SUFFERING</li>
+                    <li>MEDICAL EXPENSES</li>
+                    <li>LOST WAGES</li>
+                </ul>
+                
+                <p class="cta-text">Call me for a <span class="free">FREE</span> consultation today.</p>
+                
+                <div class="phone-numbers">
+                    <a href="tel:2165742012" class="phone-item">(216) 574-2012 – Joe Condeni (Direct)</a>
+                    <a href="tel:2165742016" class="phone-item">(216) 574-2016 – Patty Sr. Paralegal</a>
+                </div>
+                
+                <p class="services-text">
+                    We work with individuals and families on serious car, truck and motorcycle accidents, nursing home abuse and neglect, wrongful death, and catastrophic injury cases.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Video Section -->
+        <div class="video-section">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/ZB46lBRxqu0" 
+                    title="Joe Condeni Introduction Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+        <!-- Google Reviews -->
+        <p class="reviews-link">
+            See what our former clients have said: <a href="https://www.google.com/search?sca_esv=c2f1926528fd7bde&sxsrf=ANbL-n5057lkw89J5OO1rgdXirURqWur4A:1769636214093&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_xx3AFKgbWVylg0fIJuuM31qZlAox2swL4dHGW0ci3qgg7JBHwC856fEzSGCnbCyCpGWkEtHyLJKV8dBvhigeSztRpxUo-ZWU-yyvHqXbAdr8071f_Z8jrLHX_PUR1gWj5eMt2fs%3D&q=Condeni+Law+LLC+-+Voice+For+The+Injured+Reviews&sa=X&ved=2ahUKEwi-xLDPmK-SAxXCM1kFHdHFBPsQ0bkNegQIPxAH&biw=1512&bih=848&dpr=2&aic=0" target="_blank">Google Reviews</a>
+        </p>
+        
+        <!-- Process Section -->
+        <div class="process-section">
+            <h2 class="process-title">When bad things happen to good people:</h2>
+            
+            <p class="process-item">
+                <span class="label">A. Your job</span> <span class="text">is to heal, recover and return to health.</span>
+            </p>
+            
+            <p class="process-item">
+                <span class="label">B. Our job</span> <span class="text">is to make you whole: deal with the insurance carriers, secure evidence, and recover maximum compensation for your human losses including pain and suffering, medical expenses, and lost income.</span>
+            </p>
+        </div>
+        
+        <!-- Partnership Banner -->
+        <div class="partnership-banner">
+            <p>
+                We are also pleased to announce Mr. Condeni has become <strong>"Of Counsel"</strong> with <span class="firm-name">"Paulozzi, Alkire and Condeni – Personal Injury Lawyers"</span> collaborating on complex million-dollar injury cases. This alliance allows for statewide representation of those seriously harmed by the carelessness of others.
+            </p>
+        </div>
+        
+        <!-- Contact Footer -->
+        <div class="contact-footer">
+            <p>
+                <strong>Email us directly:</strong> 
+                <a href="mailto:joe@condenilaw.com">joe@condenilaw.com</a> and 
+                <a href="mailto:patty@condenilaw.com">patty@condenilaw.com</a>
+            </p>
+            <p>
+                <strong>Read Mr. Condeni's bio at:</strong> 
+                <a href="https://www.lawohio.com" target="_blank">www.lawohio.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
